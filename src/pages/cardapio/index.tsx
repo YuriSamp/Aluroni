@@ -3,7 +3,8 @@ import styles from './Cardapio.module.scss';
 import { Buscador } from 'pages/cardapio/buscador';
 import { Filtros } from './filtros';
 import { Ordenador } from './select';
-import { Itens } from './itens';
+import Itens from './itens';
+import stylestema from 'styles/tema.module.scss';
 
 export const Cardapio = () => {
   const [filtro, setFiltro] = useState<number | null>(null);
@@ -11,7 +12,7 @@ export const Cardapio = () => {
   const [ordenador, setOrdenador] = useState('');
   return (
     <section className={styles.cardapio}>
-      <h3 className={styles.cardapio__titulo}>Cardápio</h3>
+      <h3 className={stylestema.titulo}>Cardápio</h3>
       <Buscador busca={busca} setBusca={setBusca} />
       <div className={styles.filtros}>
         <Filtros filtro={filtro} setFiltro={setFiltro} />
